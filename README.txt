@@ -14,7 +14,7 @@ Convert YouTube video to MP3: POST /upload/youtube (JSON: { "youtube_link": "URL
 
 Installation:
 
-Clone: git clone https://github.com/yourusername/mp4-to-mp3-api.git
+Clone: git clone https://github.com/U82146510/mp4-to-mp3-api.git
 
 Install: npm install
 
