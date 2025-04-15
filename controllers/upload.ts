@@ -1,9 +1,9 @@
 import { type Request,type Response,type NextFunction } from "express";
 import path from 'path';
 import { fileURLToPath } from 'url';
-import {convert_youtube_to_mp3} from '../utils/convert_youtube_to_mp3.ts';
-import {download_video} from '../utils/download_video.ts';
-import {convert_to_mp3} from '../utils/convert_to_mp3.ts';
+import {convert_youtube_to_mp3} from '../utils/convert_youtube_to_mp3';
+import {download_video} from '../utils/download_video';
+import {convert_to_mp3} from '../utils/convert_to_mp3';
 import { Readable } from 'stream';
 import ytdl from '@distube/ytdl-core';
 import fs from 'fs';
