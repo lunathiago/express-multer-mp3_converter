@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {upload_youtube,upload_files} from '../controllers/upload.ts';
+import {upload_youtube,upload_files} from '../controllers/upload';
 import multer from 'multer';
 
 const mem_storage = multer.memoryStorage();
