@@ -17,4 +17,4 @@ RUN tsc
 EXPOSE 3000
 
 # Executa o código compilado
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/index.js"]
