@@ -1,6 +1,6 @@
 import express,{type Application} from 'express';
 import error_handler from './error/error_handler.js';
-import {upload_file} from './route/upload'; 
+import {upload_file} from './route/upload.js'; 
 
 const app:Application = express();
 app.use(express.json());
