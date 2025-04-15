@@ -1,22 +1,20 @@
-# Usa uma imagem Node com ffmpeg instalado
-FROM jrottenberg/ffmpeg:4.4-alpine AS ffmpeg
-
 FROM node:18-alpine
 
-# Instala ffmpeg manualmente
-RUN apk add --no-cache ffmpeg
+# Instala ffmpeg e typescript
+RUN apk add --no-cache ffmpeg \
+  && npm install -g typescript
 
-# Cria diretório de trabalho
 WORKDIR /app
 
-# Copia arquivos do projeto
 COPY . .
 
-# Instala dependências
 RUN npm install
 
-# Expõe a porta usada pela aplicação
+# Compila os arquivos TypeScript
+RUN tsc
+
+# Expõe a porta usada pela API
 EXPOSE 3000
 
-# Inicia a aplicação
-CMD ["node", "app.js"]
+# Executa o código compilado
+CMD ["node", "dist/server.js"]
